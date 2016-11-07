@@ -1,0 +1,33 @@
+{
+  "src_folders":["./tests"],
+  "output_folder":"./tests/reports",
+  "live_output":true,
+  "parallel_process_delay":1500,
+
+  "selenium":{
+     "start_process":true,
+     "server_path":"./tests/selenium/selenium-server-standalone-2.53.1.jar",
+     "log_path":"./tests",
+     "cli_args":{
+       "webdriver.chrome.driver" : "./tests/selenium/chromedriver"
+     }
+   },
+
+  "test_settings":{
+    "default":{
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : "./tests/screenshots"
+      },
+      "desiredCapabilities":{
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}

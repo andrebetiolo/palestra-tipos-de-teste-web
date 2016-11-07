@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title ng-bind="title">Palestra sobre teste</title>
+		<meta name="author" content="André Betiolo">
+	</head>
+
+	<body>
+
+		<style>
+
+			body{
+				margin: 0;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+			}
+
+			body, form, .container{
+				display: flex;
+				flex-direction: column;
+			}
+
+			input, button, .container{
+				width: 100%;
+			}
+
+			form{
+				max-width: 60rem;
+			}
+
+			.container{
+				margin: 1rem 0;
+			}
+
+		</style>
+
+
+		<form id="form_login" onsubmit="login()">
+
+			<div class="container">
+				<label for="usuario">Usuario</label>
+				<input type="text" id="usuario" required>
+			</div>
+
+			<div class="container">
+				<label for="senha">Senha</label>
+				<input type="password" id="senha" required>
+			</div>
+
+			<button type="submit">Logar</button>
+		</form>
+
+
+		<script>
+
+		function login(){
+			var usuario = document.querySelector('#usuario').value;
+			var senha = document.querySelector('#senha').value;
+
+			if(usuario === "andre" && senha === "palestra"){
+				location.href = "logado.html";
+			}
+
+			event.preventDefault();
+		}
+		</script>
+
+
+
+	</body>
+</html>
